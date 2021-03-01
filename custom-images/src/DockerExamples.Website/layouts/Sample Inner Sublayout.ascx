@@ -5,7 +5,7 @@
         <p style="margin: 0 16px; font-size: 30px;">&#43;</p>
         <img src="/images/docker-logo.png" alt="Docker" />
         <p style="margin: 0 16px; font-size: 30px;">&#43;</p>
-        <img src="https://kubernetes.io/images/nav_logo.svg" alt="Docker" style="height:52px;" />
+        <img src="https://kubernetes.io/images/kubernetes-horizontal-color.png" alt="Docker" style="height:52px;" />
     </div>
     <div id="Content">
         <div id="LeftContent">
