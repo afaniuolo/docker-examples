@@ -4,6 +4,8 @@
         <img src="-/media/Default Website/sc_logo.ashx" alt="Sitecore" id="scLogo" />
         <p style="margin: 0 16px; font-size: 30px;">&#43;</p>
         <img src="/images/docker-logo.png" alt="Docker" />
+        <p style="margin: 0 16px; font-size: 30px;">&#43;</p>
+        <img src="https://kubernetes.io/images/nav_logo.svg" alt="Docker" style="height:52px;" />
     </div>
     <div id="Content">
         <div id="LeftContent">
