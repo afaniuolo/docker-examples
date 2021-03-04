@@ -12,5 +12,5 @@
             <sc:placeholder runat="server" key="content" />
         </div>				
     </div>
-    <div id="Footer"><hr class="divider"/>&#169; <%= Sitecore.DateUtil.ToServerTime(DateTime.UtcNow).Year.ToString()%> Sitecore</div>
+    <div id="Footer"><hr class="divider"/>&#169; <%= Sitecore.DateUtil.ToServerTime(DateTime.UtcNow).Year.ToString()%> Sitecore - Test</div>
 </div>
