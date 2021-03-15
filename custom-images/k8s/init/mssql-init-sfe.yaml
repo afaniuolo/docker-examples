@@ -1,14 +1,14 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: mssql-init
+  name: mssql-init-sfe
 spec:
   template:
     spec:
       imagePullSecrets:
         - name: sitecore-docker-registry
       containers:
-      - name: mssql-init
+      - name: mssql-init-sfe
         image: sitecorealessandro.azurecr.io/mycustomsolution-xm1-mssql-init-sfe:3.2.1-1809-10.0-ltsc2019
         env:
         - name: sitecore_admin_password
