@@ -2,8 +2,8 @@ version: "2.4"
 
 services:
   
-  mssql-init:
-    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xm1-mssql-init:${VERSION:-latest}
+  mssql-init-sfe:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xm1-mssql-init-sfe:${SFE_VERSION}-${SITECORE_VERSION}
     build:
       context: ./docker/build/mssql-init
       args:
