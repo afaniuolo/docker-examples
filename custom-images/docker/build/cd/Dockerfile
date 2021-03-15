@@ -2,12 +2,14 @@
 
 ARG BASE_IMAGE
 ARG SXA_IMAGE
+ARG SFE_IMAGE
 ARG TOOLING_IMAGE
 ARG SOLUTION_IMAGE
 
 FROM ${SOLUTION_IMAGE} as solution
 FROM ${TOOLING_IMAGE} as tooling
 FROM ${SXA_IMAGE} as sxa
+FROM ${SFE_IMAGE} as sfe
 FROM ${BASE_IMAGE}
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
@@ -22,6 +24,9 @@ COPY --from=sxa \module\cd\content .\
 COPY --from=sxa \module\tools \module\tools
 RUN C:\module\tools\Initialize-Content.ps1 -TargetPath .\; `
     Remove-Item -Path C:\module -Recurse -Force;
+
+# Add SFE module
+COPY --from=sfe \module\cd\content .\
 
 # Copy solution website files
 COPY --from=solution \artifacts\website\ .\
