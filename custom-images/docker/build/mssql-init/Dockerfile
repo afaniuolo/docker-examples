@@ -12,4 +12,4 @@ SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPref
 
 COPY --from=module_assets C:\module\db c:\resources\$MODULE_NAME
 
-ENTRYPOINT ["powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue'; .\\DeployDatabases.ps1 -ResourcesDirectory c:\resources\$MODULE_NAME -SqlServer $env:SQL_SERVER -SqlAdminUser $env:SQL_ADMIN_LOGIN -SqlAdminPassword $env:SQL_ADMIN_PASSWORD -SitecoreAdminPassword $env:sitecore_admin_password -SkipStartingServer"]
+ENTRYPOINT .\DeployDatabases.ps1 -ResourcesDirectory c:\resources\$env:MODULE_NAME -SqlServer $env:SQL_SERVER -SqlAdminUser $env:SQL_ADMIN_LOGIN -SqlAdminPassword $env:SQL_ADMIN_PASSWORD -SkipStartingServer
